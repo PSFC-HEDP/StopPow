@@ -31,3 +31,19 @@ For the SWIG libraries:
 - SWIG v2.x
 - Java 7 JDK / JRE
 - Python with headers
+
+## Installation suggestions (in connection with NIF_WRF)
+- get gsl version 1.x (not 2.x)
+    - ./configure
+    - make
+    - make check
+    - make install
+- get swig (tested with v 3.something)
+- get WRF_Analysis
+- get StopPow, build library and :
+    - get stoppow from github
+    - cd python_swig, make
+    - move _StopPow.so AND StopPow.py to WRF_Analysis/util/
+- run WRF:
+    - move main.py to WRF_Analysis-master (ie WRF_Analysis/../)
+    - python3 main.py
